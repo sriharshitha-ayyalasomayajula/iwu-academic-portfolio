@@ -1,6 +1,7 @@
 /**
  * Portfolio identity. Name, term, program, and institution are filled.
- * Process and AI assistance text shown on the artifact page live in documentation.ts.
+ * The Process section on the artifact page is in documentation.ts.
+ * No course or university AI-disclosure rule is recorded in this project.
  */
 export const site = {
   portfolioTitle: 'IWU Academic Portfolio',
@@ -20,15 +21,11 @@ export const site = {
     'I bring practical experience building AI solutions together with an interest in understanding how and why different machine learning methods work. My goal is to combine sound model selection, technical implementation, and clear communication to develop useful, reliable AI applications.',
   processNarrative:
     'I selected ten methods across tabular machine learning, computer vision, natural language processing, and generative AI. I researched their learning paradigms and the relationships among them, then developed the taxonomy and the mechanism diagrams. I revised the layout and terminology through multiple versions, checked the citations, exported the two-page infographic, and deployed this React and Vite portfolio to GitHub Pages.',
-  aiDisclosure:
-    'I used ChatGPT and Claude to support planning, technical review, and content refinement, and Cursor to assist with website implementation and deployment. I reviewed and revised the final content and presentation.',
 }
 
 export function warnIfSiteConfigIncomplete(): void {
   if (!import.meta.env.DEV) return
-  const missing = (
-    ['processNarrative', 'aiDisclosure'] as const
-  ).filter((key) => site[key].trim().length === 0)
+  const missing = (['processNarrative'] as const).filter((key) => site[key].trim().length === 0)
   if (missing.length > 0) {
     console.warn(
       `site.config.ts is missing ${missing.join(', ')}. Those fields are omitted from the public page until they are filled in.`,

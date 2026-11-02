@@ -73,7 +73,7 @@ export const references: Reference[] = [
     year: '2020',
     title: 'Denoising diffusion probabilistic models',
     container: 'Advances in Neural Information Processing Systems 33',
-    containerSuffix: '(NeurIPS 2020)',
+    containerSuffix: '(NeurIPS 2020), 6840–6851',
     url: 'https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html',
   },
   {
@@ -114,7 +114,7 @@ export const references: Reference[] = [
     year: '1986',
     title: 'Induction of decision trees',
     container: 'Machine Learning, 1',
-    containerSuffix: ', 81–106',
+    containerSuffix: '(1), 81–106',
     url: 'https://doi.org/10.1007/bf00116251',
   },
   {

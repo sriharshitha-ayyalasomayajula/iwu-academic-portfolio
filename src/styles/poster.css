@@ -471,6 +471,7 @@
   margin: 0.7rem 0 0;
   color: var(--ink-soft);
   font-size: 0.86rem;
+  overflow-wrap: anywhere;
 }
 
 .artifact-preview {

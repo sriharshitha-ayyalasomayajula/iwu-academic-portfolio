@@ -42,13 +42,6 @@ export const aboutSections: DocSection[] = [
     ],
   },
   {
-    id: 'ai-disclosure',
-    title: 'AI Assistance',
-    paragraphs: [
-      'I used ChatGPT and Claude to support planning, technical review, and content refinement, and Cursor to assist with website implementation and deployment. I reviewed and revised the final content and presentation.',
-    ],
-  },
-  {
     id: 'tools',
     title: 'Tools and Technologies',
     paragraphs: [
@@ -102,10 +95,21 @@ export const aboutSections: DocSection[] = [
   },
   {
     id: 'value',
-    title: 'Value Proposition (Unique Value / Relevance)',
-    paragraphs: [
-      'The useful part of the figure is the separation of paradigm, model form, and domain, together with six relationships that can be checked against the sources. A reader can see that an ensemble remains supervised, that a Transformer is not one training objective, and that generative AI names a task. The same separation is why the self-supervised lane is drawn inside the unsupervised family and still labeled on its own.',
-      'The figure does not rank the methods, report accuracy, or recommend an algorithm for a deployment. Primary domains are typical uses on this assignment, not exclusive ones.',
+    title: 'Value Proposition',
+    paragraphs: [],
+    blocks: [
+      {
+        heading: 'Unique Value',
+        paragraphs: [
+          'I separate learning paradigm, model architecture, and application domain, and I connect the ten algorithms through visual relationships. The self-supervised methods stay inside the unsupervised family and keep their own label.',
+        ],
+      },
+      {
+        heading: 'Relevance',
+        paragraphs: [
+          'I designed the comparison for students and practitioners who need to compare methods and make informed model-selection decisions. Primary domains are typical uses, not exclusive ones.',
+        ],
+      },
     ],
   },
 ]

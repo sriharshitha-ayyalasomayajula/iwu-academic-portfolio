@@ -103,7 +103,7 @@
   }
 
   .print-sheet:last-child .zone-relations {
-    padding: 0.08in 0.1in 0.1in;
+    padding: 0.04in 0.1in 0.04in;
   }
 
   .print-sheet:last-child .rel-grid {
@@ -111,7 +111,7 @@
   }
 
   .print-sheet:last-child .zone {
-    margin-top: 0.1in;
+    margin-top: 0.06in;
   }
 
   .print-sheet:last-child .zone h2 {
@@ -144,18 +144,19 @@
   }
 
   .print-sheet:last-child .matrix {
-    font-size: 9pt;
+    font-size: 8.5pt;
   }
 
   .print-sheet:last-child .matrix th,
   .print-sheet:last-child .matrix td {
-    padding: 0.045in 0.08in;
+    padding: 0.028in 0.07in;
   }
 
   .print-sheet:last-child .poster-legend,
   .print-sheet:last-child .poster-footnote {
-    margin-top: 0.08in;
-    font-size: 8.5pt;
+    margin-top: 0.04in;
+    font-size: 8pt;
+    line-height: 1.25;
   }
 
   .print-sheet .lane-supervised .lane-nodes {

@@ -327,7 +327,8 @@ export function MatrixZone() {
       <p className="poster-footnote">
         Self-supervised: training targets are constructed from unlabeled data (masked token, next
         token, added noise); classified as unsupervised for this assignment. Generative AI is a
-        task category. Use cases are illustrative. Full references follow the mechanism diagrams.
+        task category. Use cases are illustrative. Mechanism diagrams and full references:
+        https://sriharshitha-ayyalasomayajula.github.io/iwu-academic-portfolio/
       </p>
     </section>
   )

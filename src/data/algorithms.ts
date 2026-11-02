@@ -64,7 +64,7 @@ export const algorithms: Algorithm[] = [
     detail:
       'Gradient boosting adds trees one at a time rather than averaging trees that were fit separately (Friedman, 2001). Each new tree is fit to the negative gradient of a chosen loss given the current ensemble. For squared error, that gradient is the remaining error. The step is scaled by a learning rate and then added in. Later trees focus on examples the ensemble still predicts poorly. Tree depth and the learning rate are the usual controls.',
     detailUseCase:
-      'An insurer estimates claim severity from policy and driver tables. Each added tree is fit to the gradient of the pricing loss, so later trees concentrate on policies the current ensemble still misprices.',
+      'An insurer estimates claim severity from policy and driver data. Each new tree is fit to the remaining error of the current ensemble, so later trees concentrate on policies whose claim severity is still predicted poorly.',
     citations: ['friedman-2001'],
     posterRow: 1,
     posterColumn: 3,
