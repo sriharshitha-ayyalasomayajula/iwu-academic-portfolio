@@ -1,8 +1,6 @@
 /**
  * Portfolio identity. Name, term, program, and institution are filled.
- * TODO(author): processNarrative — how this artifact was planned and revised
- * TODO(author): aiDisclosure — factual AI-assistance statement, only if you want it published
- * Empty strings are omitted from the page.
+ * Process and AI assistance text shown on the artifact page live in documentation.ts.
  */
 export const site = {
   portfolioTitle: 'IWU Academic Portfolio',
@@ -20,8 +18,10 @@ export const site = {
   bio: 'I am a graduate student in the Master of Science in Computer Information Sciences program, specializing in Artificial Intelligence, at Indiana Wesleyan University. My professional background includes AI engineering, machine learning applications, document intelligence, and language-model-based systems. Through this program, I aim to strengthen my theoretical understanding of model development and connect foundational concepts with practical applications.',
   personalValue:
     'I bring practical experience building AI solutions together with an interest in understanding how and why different machine learning methods work. My goal is to combine sound model selection, technical implementation, and clear communication to develop useful, reliable AI applications.',
-  processNarrative: '',
-  aiDisclosure: '',
+  processNarrative:
+    'I selected ten methods across tabular machine learning, computer vision, natural language processing, and generative AI. I researched their learning paradigms and the relationships among them, then developed the taxonomy and the mechanism diagrams. I revised the layout and terminology through multiple versions, checked the citations, exported the two-page infographic, and deployed this React and Vite portfolio to GitHub Pages.',
+  aiDisclosure:
+    'I used ChatGPT and Claude to support planning, technical review, and content refinement, and Cursor to assist with website implementation and deployment. I reviewed and revised the final content and presentation.',
 }
 
 export function warnIfSiteConfigIncomplete(): void {

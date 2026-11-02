@@ -23,7 +23,7 @@ export const aboutSections: DocSection[] = [
     id: 'description',
     title: 'Description',
     paragraphs: [
-      'Each algorithm sits in a learning-paradigm lane, carries a model-form label, and shows primary and secondary application domains. Six relationships, lettered A through F, connect methods that share a component or that are often treated as substitutes. A classification matrix repeats the same decisions in a table. A bracket marks the shared Transformer architecture of BERT and GPT-style models.',
+      'Each algorithm sits in a learning-paradigm lane, carries a model-form label, and shows primary and secondary application domains. Six relationships, lettered A through F, connect methods that share a component or that are often treated as substitutes. A classification matrix repeats the same decisions in a table.',
       'Use cases on the poster and in the notes are illustrative scenarios. They are not results from a study, and the figure does not report accuracy.',
     ],
   },
@@ -31,14 +31,22 @@ export const aboutSections: DocSection[] = [
     id: 'objective',
     title: 'Objective',
     paragraphs: [
-      'Assignment 1.5 asks for a classification of algorithm types, application domains, explanations of how the methods work, real-world use cases, and meaningful relationships. The poster is meant to carry those requirements on its own. The sections after it keep the explanations available without turning the poster into a long reference.',
+      'I want to understand how these algorithms differ in learning paradigm, architecture, task, and application. The figure keeps those distinctions visible so a method is not reduced to a single label.',
     ],
   },
-  // TODO(author): Write the development narrative in paragraphs. Do not invent planning steps, testing, instructor feedback, or reflection.
   {
     id: 'process',
     title: 'Process',
-    paragraphs: [],
+    paragraphs: [
+      'I selected ten methods across tabular machine learning, computer vision, natural language processing, and generative AI. I researched their learning paradigms and the relationships among them, then developed the taxonomy and the mechanism diagrams. I revised the layout and terminology through multiple versions, checked the citations, exported the two-page infographic, and deployed this React and Vite portfolio to GitHub Pages.',
+    ],
+  },
+  {
+    id: 'ai-disclosure',
+    title: 'AI Assistance',
+    paragraphs: [
+      'I used ChatGPT and Claude to support planning, technical review, and content refinement, and Cursor to assist with website implementation and deployment. I reviewed and revised the final content and presentation.',
+    ],
   },
   {
     id: 'tools',
@@ -99,12 +107,6 @@ export const aboutSections: DocSection[] = [
       'The useful part of the figure is the separation of paradigm, model form, and domain, together with six relationships that can be checked against the sources. A reader can see that an ensemble remains supervised, that a Transformer is not one training objective, and that generative AI names a task. The same separation is why the self-supervised lane is drawn inside the unsupervised family and still labeled on its own.',
       'The figure does not rank the methods, report accuracy, or recommend an algorithm for a deployment. Primary domains are typical uses on this assignment, not exclusive ones.',
     ],
-  },
-  // TODO(author): Write a factual AI-assistance disclosure here only if you want it published.
-  {
-    id: 'ai-disclosure',
-    title: 'AI assistance disclosure',
-    paragraphs: [],
   },
 ]
 
