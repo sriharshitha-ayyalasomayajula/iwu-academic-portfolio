@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Portfolio mark">
+  <rect width="32" height="32" rx="3" fill="#14233a"/>
+  <rect x="6" y="8" width="20" height="2.2" fill="#f4f0e6"/>
+  <rect x="6" y="15" width="14" height="2.2" fill="#8fd0cb"/>
+  <rect x="6" y="22" width="17" height="2.2" fill="#e0b48a"/>
+</svg>

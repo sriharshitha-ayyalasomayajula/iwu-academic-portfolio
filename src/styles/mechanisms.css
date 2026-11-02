@@ -1,0 +1,117 @@
+.band {
+  margin-top: 2.2rem;
+}
+
+.band h2 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.65rem, 2.4vw, 2.05rem);
+}
+
+.mechanism-grid,
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.study-group {
+  margin-top: 1.8rem;
+}
+
+.study-group h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.learn-card {
+  margin: 0;
+  padding: 0.95rem 1rem 1.05rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.learn-card h4 {
+  margin: 0.35rem 0 0;
+  font-size: 1.35rem;
+}
+
+.learn-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.55rem;
+}
+
+.learn-card p {
+  margin: 0.45rem 0 0;
+}
+
+.study-relations {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+
+.study-relations .rel-card {
+  background: #fff;
+}
+
+.mechanism,
+.note-card {
+  margin: 0;
+  padding: 0.85rem 0.95rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.mechanism h3,
+.note-card h3 {
+  margin: 0;
+  font-size: 1.22rem;
+}
+
+.mechanism svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.45rem;
+}
+
+.mechanism p,
+.note-card p {
+  margin: 0.45rem 0 0;
+}
+
+.note-meta,
+.note-sources {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.note-meta a + a {
+  margin-left: 0.75rem;
+}
+
+.notes-subhead {
+  margin: 1.6rem 0 0.2rem;
+  font-size: 1.35rem;
+}
+
+.comparison-stack {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 800px) {
+  .mechanism-grid,
+  .note-grid {
+    grid-template-columns: 1fr;
+  }
+}

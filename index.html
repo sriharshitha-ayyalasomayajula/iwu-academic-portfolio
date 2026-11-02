@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // GitHub Pages project-site fallback for client-side routes.
+      // Adapted from spa-github-pages (MIT): https://github.com/rafgraph/spa-github-pages
+      ;(function (location) {
+        if (location.search[1] === '/') {
+          var decoded = location.search
+            .slice(1)
+            .split('&')
+            .map(function (part) {
+              return part.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, '', location.pathname.slice(0, -1) + decoded + location.hash)
+        }
+      })(window.location)
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Graduate coursework portfolio for the M.S. in Computer Information Sciences, AI Specialization, at Indiana Wesleyan University. First artifact: a comparative framework of ten machine learning algorithm types for AIML-501."
+    />
+    <meta name="theme-color" content="#14233a" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,560;0,7..72,680;1,7..72,560&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>IWU Academic Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
