@@ -17,6 +17,26 @@
     print-color-adjust: exact;
   }
 
+  .site-header {
+    position: static !important;
+    top: auto;
+    z-index: auto;
+  }
+
+  .nn-page h2,
+  .nn-page h3 {
+    break-after: avoid;
+    break-inside: avoid;
+  }
+
+  .nn-page .nn-diagram,
+  .nn-page .nn-weights,
+  .nn-page .nn-groups article,
+  .nn-page .nn-split article,
+  .nn-page .nn-compare .nn-figure {
+    break-inside: avoid;
+  }
+
   .skip-link,
   .no-print {
     display: none !important;

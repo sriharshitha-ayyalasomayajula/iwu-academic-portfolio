@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer-inner">
         <p>
-          {site.courseCode} {site.courseTitle} · {site.assignment}
+          {site.courseCode} {site.courseTitle} · Academic Portfolio
           {site.institution ? ` · ${site.institution}` : ''}
         </p>
       </div>

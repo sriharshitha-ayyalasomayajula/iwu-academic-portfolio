@@ -4,6 +4,7 @@ import { SiteHeader } from './components/SiteHeader.tsx'
 import { useRoute } from './hooks/useRoute.ts'
 import { AlgorithmTypesPage } from './pages/AlgorithmTypesPage.tsx'
 import { HomePage } from './pages/HomePage.tsx'
+import { NeuralNetworksPage } from './pages/NeuralNetworksPage.tsx'
 import { NotFoundPage } from './pages/NotFoundPage.tsx'
 import { PrintPage } from './pages/PrintPage.tsx'
 
@@ -29,6 +30,7 @@ export default function App() {
   let page = <NotFoundPage />
   if (path === '/') page = <HomePage />
   if (path === '/aiml-501/algorithm-types') page = <AlgorithmTypesPage />
+  if (path === '/aiml-501/neural-networks') page = <NeuralNetworksPage />
   if (printView) page = <PrintPage />
 
   return (

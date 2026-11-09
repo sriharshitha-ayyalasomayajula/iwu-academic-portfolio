@@ -13,6 +13,7 @@ export function SiteHeader() {
           <SiteLink href="/">Home</SiteLink>
           <SiteLink href="/#coursework">Coursework</SiteLink>
           <SiteLink href="/aiml-501/algorithm-types">Algorithm Types</SiteLink>
+          <SiteLink href="/aiml-501/neural-networks">Neural Networks</SiteLink>
         </nav>
       </div>
     </header>

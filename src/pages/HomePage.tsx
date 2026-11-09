@@ -1,5 +1,6 @@
 import { SiteLink } from '../components/SiteLink.tsx'
 import { featuredProject } from '../data/courses.ts'
+import { neuralArtifact } from '../data/neuralNetworks.ts'
 import { downloadHref, infographicDownloads } from '../data/downloads.ts'
 import { site } from '../data/site.config.ts'
 import { usePageTitle } from '../hooks/useRoute.ts'
@@ -19,7 +20,8 @@ export function HomePage() {
         <p className="eyebrow">{site.courseCode} · Graduate coursework</p>
         <h1>Academic Portfolio</h1>
         <p className="lede">
-          Coursework and the Algorithm Types infographic prepared for {site.courseCode}.
+          A growing collection of graduate coursework, technical experiments, and visual learning
+          artifacts developed for AIML-501 Model Development.
         </p>
       </section>
       <dl className="identity">
@@ -44,29 +46,44 @@ export function HomePage() {
 
       <section className="home-section" id="coursework" aria-labelledby="coursework-title">
         <h2 id="coursework-title">AIML-501 Model Development</h2>
-        <article className="project-panel">
-          <p className="course-code">{featuredProject.eyebrow}</p>
-          <h3>{featuredProject.title}</h3>
-          <p>{featuredProject.summary}</p>
-          {infographicDownloads.some((item) => item.id === 'png-1') ? (
-            <img
-              className="artifact-preview"
-              src={downloadHref('aiml-501-algorithm-types-page-1.png')}
-              alt="Page 1 of the Algorithm Types infographic, showing ten machine learning methods grouped by learning paradigm."
-            />
-          ) : null}
-          <div className="button-row">
-            <SiteLink href={featuredProject.href} className="button">
-              View artifact
-            </SiteLink>
-            <a className="button" href={downloadHref('aiml-501-algorithm-types.pdf')} download>
-              Download PDF (2 pages)
-            </a>
-            <SiteLink href={featuredProject.printHref} className="button button-secondary">
-              Open print layout
-            </SiteLink>
-          </div>
-        </article>
+        <div className="project-grid">
+          <article className="project-panel">
+            <p className="course-code">{neuralArtifact.eyebrow}</p>
+            <h3>Visualizing Neural Networks</h3>
+            <p>{neuralArtifact.summary}</p>
+            <div className="button-row">
+              <SiteLink href={neuralArtifact.path} className="button">
+                View artifact
+              </SiteLink>
+              <a className="button" href={downloadHref(neuralArtifact.pptx)} download={neuralArtifact.pptx}>
+                Download PowerPoint
+              </a>
+            </div>
+          </article>
+          <article className="project-panel">
+            <p className="course-code">{featuredProject.eyebrow}</p>
+            <h3>{featuredProject.title}</h3>
+            <p>{featuredProject.summary}</p>
+            {infographicDownloads.some((item) => item.id === 'png-1') ? (
+              <img
+                className="artifact-preview"
+                src={downloadHref('aiml-501-algorithm-types-page-1.png')}
+                alt="Page 1 of the Algorithm Types infographic, showing ten machine learning methods grouped by learning paradigm."
+              />
+            ) : null}
+            <div className="button-row">
+              <SiteLink href={featuredProject.href} className="button">
+                View artifact
+              </SiteLink>
+              <a className="button" href={downloadHref('aiml-501-algorithm-types.pdf')} download>
+                Download PDF (2 pages)
+              </a>
+              <SiteLink href={featuredProject.printHref} className="button button-secondary">
+                Open print layout
+              </SiteLink>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
   )

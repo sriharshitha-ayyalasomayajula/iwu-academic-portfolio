@@ -1,0 +1,178 @@
+.page.nn-page {
+  --nn-showcase-width: 1360px;
+  width: min(var(--nn-showcase-width), calc(100% - 3rem));
+}
+
+.nn-page .lede,
+.nn-page .nn-copy,
+.nn-page .nn-copy p,
+.nn-page .nn-flow,
+.nn-page .prose-section,
+.nn-page .references-block,
+.nn-page .prose-section > p,
+.nn-page .nn-intro > p,
+.nn-page .references {
+  width: 100%;
+  max-width: none;
+}
+
+.nn-page .references {
+  overflow-wrap: anywhere;
+}
+
+.nn-intro {
+  padding-top: 2.2rem;
+}
+
+.nn-intro h1 {
+  max-width: none;
+  margin: 0.2rem 0 0.7rem;
+  font-size: clamp(2.15rem, 3.2vw, 3.15rem);
+  line-height: 1.12;
+}
+
+.nn-intro .button-row {
+  margin-top: 1.1rem;
+}
+
+.nn-page .prose-section {
+  margin-top: 2.4rem;
+}
+
+.nn-groups,
+.nn-split,
+.nn-compare {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-items: stretch;
+}
+
+.nn-groups {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.nn-split,
+.nn-compare {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.nn-groups article,
+.nn-split article,
+.nn-figure {
+  min-width: 0;
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.nn-compare .nn-figure {
+  padding: 0.55rem;
+}
+
+.nn-compare .nn-figure figcaption {
+  padding: 0.75rem 0.45rem 0.35rem;
+}
+
+.nn-groups h3,
+.nn-split h3,
+.nn-figure figcaption strong {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.nn-groups ul,
+.nn-figure ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.nn-flow {
+  margin-top: 0.9rem;
+}
+
+.nn-diagram {
+  display: block;
+  width: min(100%, 820px);
+  height: auto;
+  margin: 2rem auto;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.nn-weights {
+  width: min(100%, 720px);
+  margin: 1.75rem auto 0;
+}
+
+.nn-weights img {
+  width: 100%;
+  height: auto;
+}
+
+.nn-edge {
+  stroke: #c5d0dc;
+  stroke-width: 1;
+}
+
+.nn-edge-pos {
+  stroke: #2f6fed;
+  stroke-width: 2.5;
+}
+
+.nn-edge-neg {
+  stroke: #e86a17;
+  stroke-width: 2.5;
+}
+
+.nn-node {
+  fill: #fff;
+  stroke: #1d4e89;
+  stroke-width: 1.5;
+}
+
+.nn-output {
+  fill: #fbf1e8;
+}
+
+.nn-diagram text {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13px;
+  fill: #14233a;
+}
+
+.nn-figure a {
+  display: block;
+}
+
+.nn-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.nn-figure figcaption {
+  margin-top: 0.7rem;
+}
+
+.nn-figure figcaption p {
+  margin: 0.45rem 0 0;
+}
+
+.nn-page .nn-copy {
+  margin-top: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .page.nn-page {
+    width: min(1360px, calc(100% - 2rem));
+  }
+
+  .nn-groups,
+  .nn-split,
+  .nn-compare {
+    grid-template-columns: 1fr;
+  }
+}

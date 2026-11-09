@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.venv
+scripts/presentation/.venv
 
 # Environment, credentials, and temporary files
 .env
@@ -28,6 +30,7 @@ temp
 !.vscode/extensions.json
 .idea
 .DS_Store
+~$*
 *.suo
 *.ntvs*
 *.njsproj
