@@ -358,6 +358,37 @@ code {
   margin-top: 0.9rem;
 }
 
+.skill-lines {
+  margin: 0.35rem 0 0;
+}
+
+.skill-lines div {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 0.2rem 1.25rem;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.skill-lines div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-lines dt,
+.skill-lines dd {
+  margin: 0;
+}
+
+.skill-lines dt {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.skill-lines dd {
+  color: var(--ink-soft);
+}
+
 .course-row,
 .project-panel {
   background: var(--card);
@@ -557,6 +588,11 @@ code {
   .site-footer-inner {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .skill-lines div {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
   }
 }
 

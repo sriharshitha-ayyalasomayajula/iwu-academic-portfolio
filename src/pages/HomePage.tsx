@@ -45,6 +45,24 @@ export function HomePage() {
         </article>
       </section>
 
+      <section className="home-section" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <dl className="skill-lines">
+          <div>
+            <dt>AI &amp; Machine Learning</dt>
+            <dd>Model development, neural networks, generative AI</dd>
+          </div>
+          <div>
+            <dt>AI Engineering</dt>
+            <dd>Python, LLM applications, document intelligence</dd>
+          </div>
+          <div>
+            <dt>Evaluation &amp; Research</dt>
+            <dd>Model evaluation, technical analysis, data visualization</dd>
+          </div>
+        </dl>
+      </section>
+
       <section className="home-section" id="coursework" aria-labelledby="coursework-title">
         <h2 id="coursework-title">AIML-501 Model Development</h2>
         <div className="project-grid">
