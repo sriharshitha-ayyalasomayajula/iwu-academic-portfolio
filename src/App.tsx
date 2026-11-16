@@ -4,13 +4,16 @@ import { SiteHeader } from './components/SiteHeader.tsx'
 import { useRoute } from './hooks/useRoute.ts'
 import { AlgorithmTypesPage } from './pages/AlgorithmTypesPage.tsx'
 import { HomePage } from './pages/HomePage.tsx'
+import { LlmPrintPage } from './pages/LlmPrintPage.tsx'
+import { LlmTrainingPage } from './pages/LlmTrainingPage.tsx'
 import { NeuralNetworksPage } from './pages/NeuralNetworksPage.tsx'
 import { NotFoundPage } from './pages/NotFoundPage.tsx'
 import { PrintPage } from './pages/PrintPage.tsx'
 
 export default function App() {
   const path = useRoute()
-  const printView = path === '/aiml-501/algorithm-types/print'
+  const printView =
+    path === '/aiml-501/algorithm-types/print' || path === '/aiml-501/llm-training/print'
 
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
@@ -31,7 +34,9 @@ export default function App() {
   if (path === '/') page = <HomePage />
   if (path === '/aiml-501/algorithm-types') page = <AlgorithmTypesPage />
   if (path === '/aiml-501/neural-networks') page = <NeuralNetworksPage />
-  if (printView) page = <PrintPage />
+  if (path === '/aiml-501/llm-training') page = <LlmTrainingPage />
+  if (path === '/aiml-501/algorithm-types/print') page = <PrintPage />
+  if (path === '/aiml-501/llm-training/print') page = <LlmPrintPage />
 
   return (
     <>

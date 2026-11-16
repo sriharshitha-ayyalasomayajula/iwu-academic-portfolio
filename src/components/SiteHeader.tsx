@@ -12,6 +12,7 @@ export function SiteHeader() {
         <nav className="site-nav" aria-label="Primary">
           <SiteLink href="/">Home</SiteLink>
           <SiteLink href="/#coursework">Coursework</SiteLink>
+          <SiteLink href="/aiml-501/llm-training">LLM Training</SiteLink>
           <SiteLink href="/aiml-501/algorithm-types">Algorithm Types</SiteLink>
           <SiteLink href="/aiml-501/neural-networks">Neural Networks</SiteLink>
         </nav>

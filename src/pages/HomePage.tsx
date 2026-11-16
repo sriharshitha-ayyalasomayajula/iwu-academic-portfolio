@@ -1,5 +1,6 @@
 import { SiteLink } from '../components/SiteLink.tsx'
 import { featuredProject } from '../data/courses.ts'
+import { llmArtifact } from '../data/llmTraining.ts'
 import { neuralArtifact } from '../data/neuralNetworks.ts'
 import { downloadHref, infographicDownloads } from '../data/downloads.ts'
 import { site } from '../data/site.config.ts'
@@ -47,6 +48,30 @@ export function HomePage() {
       <section className="home-section" id="coursework" aria-labelledby="coursework-title">
         <h2 id="coursework-title">AIML-501 Model Development</h2>
         <div className="project-grid">
+          <article className="project-panel">
+            <p className="course-code">{llmArtifact.eyebrow}</p>
+            <h3>
+              <SiteLink href={llmArtifact.path} className="artifact-title-link">
+                {llmArtifact.title}
+              </SiteLink>
+            </h3>
+            <p>{llmArtifact.summary}</p>
+            <SiteLink href={llmArtifact.path} className="artifact-preview-link">
+              <img
+                className="artifact-preview"
+                src={downloadHref(llmArtifact.png1)}
+                alt="Page 1 of the LLM training infographic: five training stages, four resource tiles, and a flow from GPU-hours to cost, energy, and time."
+              />
+            </SiteLink>
+            <div className="button-row">
+              <SiteLink href={llmArtifact.path} className="button">
+                View artifact
+              </SiteLink>
+              <a className="button" href={downloadHref(llmArtifact.pdf)} download={llmArtifact.pdf}>
+                Download PDF (2 pages)
+              </a>
+            </div>
+          </article>
           <article className="project-panel">
             <p className="course-code">{neuralArtifact.eyebrow}</p>
             <h3>Visualizing Neural Networks</h3>
