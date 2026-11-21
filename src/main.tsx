@@ -7,6 +7,7 @@ import './styles/mechanisms.css'
 import './styles/print.css'
 import './styles/neural.css'
 import './styles/a34.css'
+import './styles/a44.css'
 import App from './App.tsx'
 
 warnIfSiteConfigIncomplete()

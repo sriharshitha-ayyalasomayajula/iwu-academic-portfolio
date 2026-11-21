@@ -9,11 +9,15 @@ import { LlmTrainingPage } from './pages/LlmTrainingPage.tsx'
 import { NeuralNetworksPage } from './pages/NeuralNetworksPage.tsx'
 import { NotFoundPage } from './pages/NotFoundPage.tsx'
 import { PrintPage } from './pages/PrintPage.tsx'
+import { XaiPage } from './pages/XaiPage.tsx'
+import { XaiPrintPage } from './pages/XaiPrintPage.tsx'
 
 export default function App() {
   const path = useRoute()
   const printView =
-    path === '/aiml-501/algorithm-types/print' || path === '/aiml-501/llm-training/print'
+    path === '/aiml-501/algorithm-types/print' ||
+    path === '/aiml-501/llm-training/print' ||
+    path === '/aiml-501/explainable-ai/print'
 
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
@@ -35,8 +39,10 @@ export default function App() {
   if (path === '/aiml-501/algorithm-types') page = <AlgorithmTypesPage />
   if (path === '/aiml-501/neural-networks') page = <NeuralNetworksPage />
   if (path === '/aiml-501/llm-training') page = <LlmTrainingPage />
+  if (path === '/aiml-501/explainable-ai') page = <XaiPage />
   if (path === '/aiml-501/algorithm-types/print') page = <PrintPage />
   if (path === '/aiml-501/llm-training/print') page = <LlmPrintPage />
+  if (path === '/aiml-501/explainable-ai/print') page = <XaiPrintPage />
 
   return (
     <>

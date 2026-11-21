@@ -1,6 +1,7 @@
 import { SiteLink } from '../components/SiteLink.tsx'
 import { featuredProject } from '../data/courses.ts'
 import { llmArtifact } from '../data/llmTraining.ts'
+import { xaiArtifact } from '../data/xai.ts'
 import { neuralArtifact } from '../data/neuralNetworks.ts'
 import { downloadHref, infographicDownloads } from '../data/downloads.ts'
 import { site } from '../data/site.config.ts'
@@ -66,6 +67,30 @@ export function HomePage() {
       <section className="home-section" id="coursework" aria-labelledby="coursework-title">
         <h2 id="coursework-title">AIML-501 Model Development</h2>
         <div className="project-grid">
+          <article className="project-panel">
+            <p className="course-code">{xaiArtifact.eyebrow}</p>
+            <h3>
+              <SiteLink href={xaiArtifact.path} className="artifact-title-link">
+                {xaiArtifact.title}
+              </SiteLink>
+            </h3>
+            <p>{xaiArtifact.summary}</p>
+            <SiteLink href={xaiArtifact.path} className="artifact-preview-link">
+              <img
+                className="artifact-preview"
+                src={downloadHref(xaiArtifact.png1)}
+                alt="Page 1 of the explainable-AI infographic: explanation methods, the Turpin cue study, and the Claude Golden Gate feature result."
+              />
+            </SiteLink>
+            <div className="button-row">
+              <SiteLink href={xaiArtifact.path} className="button">
+                View artifact
+              </SiteLink>
+              <a className="button" href={downloadHref(xaiArtifact.pdf)} download={xaiArtifact.pdf}>
+                Download PDF (2 pages)
+              </a>
+            </div>
+          </article>
           <article className="project-panel">
             <p className="course-code">{llmArtifact.eyebrow}</p>
             <h3>
