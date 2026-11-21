@@ -13,7 +13,7 @@ const metrics = [
   ['ROC-AUC', 'How well scores separate classes across thresholds. For a binary task, 0.5 is chance and 1.0 is perfect. This is not accuracy.'],
   ['Calibration', 'Whether stated confidence matches how often the model is correct.'],
   ['Robustness', 'Whether performance holds when the setting shifts.'],
-  ['External validation', 'A test on data the evaluation did not already live inside.'],
+  ['External validation', 'Testing on independent data from a different setting, such as another hospital.'],
 ] as const
 
 const governance = [
